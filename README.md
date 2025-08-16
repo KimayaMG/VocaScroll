@@ -14,29 +14,29 @@ Basic Commands:
 
 Press the down arrow key 3 times to activate VocaScroll.
 
-"Start scrolling"    -> Begin auto-scroll
-"Stop scrolling"     -> Stop scrolling
-"Scroll faster"      -> Increase speed
-"Scroll slower"      -> Decrease speed
-"Go to top"          -> Jump to page top
-"Go to bottom"       -> Jump to page bottom
-"Pause video"        -> Pause current video
-"Play video"         -> Play current video
-"Maximize video"     -> Maximize current video
-"Minimize video"     -> Minimize current video
-"Maximize window"    -> Maximize browser window
-"Shrink browser"     -> Shrinks the browser window
-"Left tab"           -> Switch to left tab
-"Right tab"          -> Switch to right tab
-"Scroll Up"          -> Scroll Direction changes to 'Upwards'
-"Scroll Down"        -> Scroll Direction changes to 'Downwards'
-"Go Back"            -> Navigate back to the previous page (Based on user history)
-"Go Forward"         -> Navigate to the next page (Based on user history)
-"Reload"             -> Reloads browser window
-"Zoom In"            -> Zooms in by 10%
-"Zoom Out"           -> Zooms out by 10%
-"Focus Search"       -> Focuses on Search Bar
-"Stop listening"     -> Disable voice recognition
+"Start scrolling"    -> Begin auto-scroll <br>
+"Stop scrolling"     -> Stop scrolling <br>
+"Scroll faster"      -> Increase speed <br>
+"Scroll slower"      -> Decrease speed <br>
+"Go to top"          -> Jump to page top <br>
+"Go to bottom"       -> Jump to page bottom <br>
+"Pause video"        -> Pause current video <br>
+"Play video"         -> Play current video <br>
+"Maximize video"     -> Maximize current video <br>
+"Minimize video"     -> Minimize current video <br>
+"Maximize window"    -> Maximize browser window <br>
+"Shrink browser"     -> Shrinks the browser window <br>
+"Left tab"           -> Switch to left tab <br>
+"Right tab"          -> Switch to right tab <br>
+"Scroll Up"          -> Scroll Direction changes to 'Upwards' <br>
+"Scroll Down"        -> Scroll Direction changes to 'Downwards' <br>
+"Go Back"            -> Navigate back to the previous page (Based on user history) <br>
+"Go Forward"         -> Navigate to the next page (Based on user history) <br>
+"Reload"             -> Reloads browser window <br>
+"Zoom In"            -> Zooms in by 10% <br>
+"Zoom Out"           -> Zooms out by 10% <br>
+"Focus Search"       -> Focuses on Search Bar <br>
+"Stop listening"     -> Disable voice recognition <br>
 
 
 
