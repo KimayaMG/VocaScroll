@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>VocaScroll - AI Voice Assistant</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+
+<body>
+  <div class="container">
+    <header>
+      <div class="logo">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M12 14c1.66 0 3-1.34 3-3V5c0-1.66-1.34-3-3-3S9 3.34 9 5v6c0 1.66 1.34 3 3 3z" />
+          <path
+            d="M17 11c0 2.76-2.24 5-5 5s-5-2.24-5-5H5c0 3.53 2.61 6.43 6 6.92V21h2v-3.08c3.39-.49 6-3.39 6-6.92h-2z" />
+        </svg>
+      </div>
+      <div class="status-text">
+        <h3 id="statusText">AI Voice Assistant Ready</h3>
+        <p>Press <kbd>↓↓↓</kbd> (3x quickly) to start listening</p>
+      </div>
+    </header>
+
+    <div class="controls">
+      <button id="startBtn" class="main-btn">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M8 5v14l11-7z" />
+        </svg>
+        Start Scrolling
+      </button>
+      <div>
+        <button id="pauseBtn" class="secondary-btn" disabled>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z" />
+          </svg>
+          Pause
+        </button>
+        <button id="stopBtn" class="secondary-btn" disabled>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M6 6h12v12H6z" />
+          </svg>
+          Stop
+        </button>
+      </div>
+    </div>
+
+    <div class="speed-control">
+      <label for="speedSlider">Scroll Speed</label>
+      <input type="range" id="speedSlider" min="0.5" max="5" step="0.5" value="1.0">
+      <span id="speedValue">1.0x</span>
+    </div>
+
+    <div class="commands-section">
+      <h3>Voice Commands</h3>
+      <div class="commands-grid">
+        <div class="command-item">
+          <span class="command">Press <kbd>↓</kbd> 3x</span>
+          <span class="description">Activate VocaScroll</span>
+        </div>
+        <div class="command-item">
+          <span class="command">"Start scrolling"</span>
+          <span class="description">Begin auto-scroll</span>
+        </div>
+        <div class="command-item">
+          <span class="command">"Stop scrolling"</span>
+          <span class="description">Stop scrolling</span>
+        </div>
+        <div class="command-item">
+          <span class="command">"Scroll faster"</span>
+          <span class="description">Increase speed</span>
+        </div>
+        <div class="command-item">
+          <span class="command">"Scroll slower"</span>
+          <span class="description">Decrease speed</span>
+        </div>
+        <div class="command-item">
+          <span class="command">"Go to top"</span>
+          <span class="description">Jump to page top</span>
+        </div>
+        <div class="command-item">
+          <span class="command">"Go to bottom"</span>
+          <span class="description">Jump to page bottom</span>
+        </div>
+        <div class="command-item">
+          <span class="command">"Pause video"</span>
+          <span class="description">Pause current video</span>
+        </div>
+        <div class="command-item">
+          <span class="command">"Play video"</span>
+          <span class="description">Play current video</span>
+        </div>
+        <div class="command-item">
+          <span class="command">"Maximize video"</span>
+          <span class="description">Maximize current video</span>
+        </div>
+        <div class="command-item">
+          <span class="command">"Minimize video"</span>
+          <span class="description">Minimize current video</span>
+        </div>
+        <div class="command-item">
+          <span class="command">"Maximize window"</span>
+          <span class="description">Maximize browser window</span>
+        </div>
+        <div class="command-item">
+          <span class="command">"Shrink browser"</span>
+          <span class="description">Shrinks the browser window</span>
+        </div>
+        <div class="command-item">
+          <span class="command">"Left tab"</span>
+          <span class="description">Switch to left tab</span>
+        </div>
+        <div class="command-item">
+          <span class="command">"Right tab"</span>
+          <span class="description">Switch to right tab</span>
+        </div>
+        <div class="command-item">
+          <span class="command">"Scroll Up"</span>
+          <span class="description">Scroll Direction changes to 'Upwards'</span>
+        </div>
+        <div class="command-item">
+          <span class="command">"Scroll Down"</span>
+          <span class="description">Scroll Direction changes to 'Downwards'</span>
+        </div>
+        <div class="command-item">
+          <span class="command">"Go Back"</span>
+          <span class="description">Navigate back to the previous page</span>
+        </div>
+        <div class="command-item">
+          <span class="command">"Go Forward"</span>
+          <span class="description">Navigate to the next page</span>
+        </div>
+        <div class="command-item">
+          <span class="command">"Reload"</span>
+          <span class="description">Reloads browser window</span>
+        </div>
+        <div class="command-item">
+          <span class="command">"Zoom In"</span>
+          <span class="description">Zooms in by 10%</span>
+        </div>
+        <div class="command-item">
+          <span class="command">"Zoom Out"</span>
+          <span class="description">Zooms out by 10%</span>
+        </div>
+        <div class="command-item">
+          <span class="command">"Focus Search"</span>
+          <span class="description">Focuses on Search Bar</span>
+        </div>
+        <div class="command-item">
+          <span class="command">"Stop listening"</span>
+          <span class="description">Disable voice recognition</span>
+        </div>
+        <div class="command-item">
+          <span class="command">"Bye"</span>
+          <span class="description">Stop voice recognition</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="listening-info">
+      <h4>Continuous Listening</h4>
+      <p>Once activated, the extension listens continuously until you say "Bye" or close the browser. It will
+        pause scrolling when switching tabs and resume on the active tab.</p>
+    </div>
+
+    <footer>
+      <p>Made with ❤️ for enhanced accessibility</p>
+      <div class="version">v2.2.0 - AI Enhanced</div>
+    </footer>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+
+</html>
